@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Accueil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Menu de navigation -->
+  <nav>
+    <a href="Accueil.html">Accueil</a>
+    <a href="A propos.html">A propos</a>
+    <a href="Nos services.html">Nos services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Header avec image de fond -->
+  <header id="accueil">
+    <h1>Bienvenue chez LADEMADOI</h1>
+    <!--<p>Votre partenaire de confiance pour vos projets numériques.</p>-->
+    
+    <video autoplay muted loop id="background-vidéo">
+      <source src="vidéo3.mp4" type="video/mp4">
+    </video>
+
+  </header>
+  <button class="cta-button">Découvrez nos services</button>
+
+  <div id="tsparticles"></div>
+  <div class="overlay"></div>
+
+  <!-- Vidéo intégrée -->
+  <section id="video">
+    <h2 style="color: white;">Présentation vidéo</h2>
+    <iframe width="720" height="405" src="https://youtube.com/embed/ZOyWMh9Wam8"
+      title="Présentation" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <!-- Section témoignages 
+  <section id="temoignages" shorts/ZOyWMh9Wam8?si=QMImK3Wpd-Tf6uhU>
+    <span id="counter">0</span>
+    <h2>Ce que disent nos clients</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>"Service impeccable et rapide. Je recommande !"</p>
+        <h4>Eddy L.</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Un accompagnement sur mesure et des résultats concrets."</p>
+        <h4>Philippe D.</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Une équipe à l'écoute, professionnelle et efficace."</p>
+        <h4>Empower</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Je suis ravi des caméras qu'ils m'ont installés !"</p>
+        <h4>Tobias NG.</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Leur expertise en SE m'a permis de gagner en visibilité."</p>
+        <h4>Rose M.</h4>
+      </div>
+    </div>
+  </section>
+  -->
+<section class="testimonials-section" id="temoignages">
+    <h2 style="color: white;">Ce que disent nos clients</h2>
+    <div class="testimonial-container">
+      <button class="nav-btn" id="prev"><i class="fas fa-chevron-left"></i></button>
+      <div class="testimonial-card" id="testimonial-card">
+        <!-- Témoignage dynamique ici -->
+      </div>
+      <button class="nav-btn" id="next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+ 
+  <!-- Réseaux sociaux -->
+  <section class="socials" id="contact">
+    <h2 style="color: white;">Suivez-nous</h2>
+    <a href="https://wa.me/message/UMYDFWEE7RIDL1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://facebook.com/l/6lp1kJRRR" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.tiktok.com/@mig.steven.3.0?_r=1&_d=eigi3ea02lib27&sec_uid=MS4wLjABAAAA4iqO_nPjmZa_pHgU7D1_wVW49tfn63WU8jaY0HylPTzyPP9AIeSlH4pkKUe9s9en&share_author_id=7490319338323346454&sharer_language=fr&source=h5_m&u_code=eji6iak26kaf2m&timestamp=1747985172&user_id=7490319338323346454&sec_user_id=MS4wLjABAAAA4iqO_nPjmZa_pHgU7D1_wVW49tfn63WU8jaY0HylPTzyPP9AIeSlH4pkKUe9s9en&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7490529308507637506&share_link_id=7945683d-9bcb-425d-8e63-958f7f31157e&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb0229&social_share_type=5&enable_checksum=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.instagram.com/miguelnkanko?igsh=bzBtbHpjaWtweXNm" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://m.me/100081949398933?hash=AbY29KZ-uKXa3QCa&source=qr_link_share" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
+    <br>
+    <div style="color: #fff;"><pre>&copy; 2025 - LADEMADOI     |   Tous droits réservés.</pre></div>
+  </section>
+<!--script pour la section des clients animés-->
+  <script>
+    const testimonials = [
+      {
+        nom: "Eddy L.",
+        image: "Eddy.png",
+        note: 5,
+        texte: " Service rapide et professionnel. Mon PC fonctionne à merveille grace à vous. un profond merci pour ce service rendu ! "
+      },
+      {
+        nom: "Philippe D.",
+        image: "philippe.png",
+        note: 4,
+        texte: " Très bonne expérience. Le technicien est venu le jour même et ce dans les plus brefs délais. Je recommande fortement ! "
+      },
+      {
+        nom: "Mégane S.",
+        image: "Megane.png",
+        note: 5,
+        texte: " Installation des caméras très propre. Optez pour une sécurité plus optimale où que vous soyez dans le monde. J'adore gracement ! "
+      },
+      {
+        nom: "Tobias N.",
+        image: "Tobias.png",
+        note: 5,
+        texte: " Pré-enrôlement rapide pour mes papiers. J'ai pu effectuer mon voyage à temps lorsque mon passport avait expiré. Merci beaucoup ! "
+      },
+      {
+        nom: "Rose M.",
+        image: "Rose.png",
+        note: 5,
+        texte: " Leur expertise en Système d'exploitation m'a permis de gagner en visibilité. Je vis mieux aujourd'hui grace à vous. Un grand merci ! "
+      }
+    ];
+
+    let index = 0;
+    const card = document.getElementById("testimonial-card");
+
+    function renderStars(n) {
+      return "★".repeat(n) + "☆".repeat(5 - n);
+    }
+
+    function showTestimonial(i) {
+      const t = testimonials[i];
+      card.style.opacity = 0;
+      setTimeout(() => {
+        card.innerHTML = `
+          <img src="${t.image}" alt="client photo">
+          <div class="testimonial-name">${t.nom}</div>
+          <div class="stars">${renderStars(t.note)}</div>
+          <div class="testimonial-text">“${t.texte}”</div>
+        `;
+        card.style.opacity = 1;
+      }, 200);
+    }
+
+    document.getElementById("prev").onclick = () => {
+      index = (index - 1 + testimonials.length) % testimonials.length;
+      showTestimonial(index);
+    };
+
+    document.getElementById("next").onclick = () => {
+      index = (index + 1) % testimonials.length;
+      showTestimonial(index);
+    };
+
+    // Auto-switch
+    setInterval(() => {
+      index = (index + 1) % testimonials.length;
+      showTestimonial(index);
+    }, 5000);
+
+    // Initialiser au chargement
+    showTestimonial(index);
+  </script>
+
+<!--Script pour la vidéo en arrière-plan-->
+<script
+src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+</body>
+
+<!--fin du code html-->
+
+
+
+
+
+
+
+
+<!--Debut des règles CSS-->
+
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+    background: url('https://source.unsplash.com/1600x900/?technology,website') no-repeat center center/cover;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+
+  nav {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1000;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+  }
+
+  nav a:hover {
+    color: #00aced;
+  }
+
+  header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+  }
+
+  #background-vidéo{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+  #tsparticles {
+    position: fixed ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 0;
+  }
+
+  header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000;
+  }
+
+  header p {
+    font-size: 1.5em;
+    max-width: 600px;
+    margin-bottom: 30px;
+  }
+
+  .cta-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    left: 41%;
+  }
+
+  .cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  }
+
+  section {
+    background: #222;
+    color: #333;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  /*pour les témoignages dynamiques*/
+
+    .testimonials-section {
+      background: #000;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .testimonial-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      max-width: 800px;
+      margin: auto;
+      position: relative;
+    }
+
+    .testimonial-card {
+      background: #222;
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      width: 100%;
+      transition: opacity 0.7s ease;
+      min-height: 220px;
+    }
+
+    .testimonial-card img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .stars {
+      color: #ffdd57;
+      margin: 10px 0;
+      font-size: 1.2em;
+    }
+
+    .testimonial-name {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      margin-top: 10px;
+    }
+
+    .nav-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 2em;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .nav-btn:hover {
+      color: #ffdd57;
+    }
+/*fin*/
+
+/*
+  .testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .testimonial {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .testimonial h4 {
+    margin-top: 10px;
+    color: #007bff;
+  }
+*/
+
+/* design des icones dans le footer */
+  .socials {
+    margin: 40px 0;
+  }
+
+  .socials a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  /* design de la vidéo de présentation */
+  iframe {
+    max-width: 90%;
+    margin-top: 30px;
+    border-radius: 10px;
+  }
+
+   footer{
+        background: #222;
+        color: white;
+        text-align: center;
+        padding: 15px;
+    }
+
+</style>
+<!--Fin des règles CSS-->
+
+
+
+
+
+
+<!--Code Javascript pour les icones vectorielles, fleches ou menus,etc. -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!--le code javascript pour le nombre de clients estimatifs de l'entreprise -->
+<script>
+  let count = 0;
+  let target = 250;
+  let interval = setInterval( ()  =>{
+    count++;
+    document.getElementById("counter").textContent = count;
+    if ( count >= target) clearInterval(interval);
+  },  10);  
+</script>
+</html>

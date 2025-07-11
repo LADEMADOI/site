@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  le Script pour Icônes Lucides -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+<header>
+    <h1>MonMagasin - Contact</h1>
+    <p>Nous sommes là pour vous aider</p>
+</header>
+
+ <video autoplay muted loop id="background-vidéo">
+      <source src="vidéo1.mp4" type="video/mp4">
+    </video>
+
+<nav>
+    <a href="Accueil.html">Accueil</a>
+    <a href="A propos.html">A propos</a>
+    <a href="Nos services.html">Nos services</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+    <h2>Contactez-nous</h2>
+     <p>Vous avez une question ? Un problème avec une commande ? Remplissez ce formulaire et notre équipe vous répondra rapidement.</p>
+
+    <form id="contactform">
+      <div class="form-group">
+        <i data-lucide="user"></i>
+        <input type="text" id="nom" placeholder="Nom complet" required>
+      </div>
+
+      <div class="form-group">
+        <i data-lucide="mail"></i>
+        <input type="email" id="email" placeholder="Adresse email" required>
+      </div>
+
+      <div class="form-group">
+        <i data-lucide="tag"></i>
+        <input type="text" id="sujet" placeholder="Sujet" required>
+      </div>
+
+      <div class="form-group">
+        <i data-lucide="message-circle"></i>
+        <textarea id="message" rows="5" placeholder="Message..." required></textarea>
+      </div>
+
+      <button type="submit">
+        <i data-lucide="send"></i>
+        Envoyer via WhatsApp
+      </button>
+    </form>
+    <div class="contact-info">
+        <h3>Autres moyens de nous contacter</h3>
+        <p><strong>Email :</strong> lademadoi1@gmail.com</p>
+        <p><strong>Téléphone :</strong> +237 6 75 26 27 04</p>
+        <p><strong>Adresse :</strong> Près de l'immeuble Zachman, St Thomas, douala, Cameroun</p>
+        <p><strong>Horaires :</strong> Lundi à Samedi, 8h - 18h</p>
+    </div>
+    <!-- Insertion de la carte Google maps pour localiser l'entreprise-->
+    <iframe class="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.991823665057!2d9.8014!3d4.05095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10610f8ec1cfd9db%3A0xe861ba26817c57e6!2sSaint%20Thomas%2C%20Logbaba%2C%20Douala%2C%20Cameroun!5e0!3m2!1sfr!2sfr!4v1625148800000!5m2!1sfr!2sfr"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+
+  <footer>
+  <p><pre>&copy; 2025 - LADEMADOI     |   Tous droits réservés.</pre></p>
+</footer>
+<!--Fin du code HTML-->
+
+
+
+
+
+
+<!--La partie où le CSS intervient-->
+<style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+     h1{
+      margin: 0;
+      font-size: 50px;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav {
+    background-color:#2c3e50 ;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    }
+
+    nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    text-align: center;
+  }
+
+    nav a:hover {
+    background-color: #1abc9c;
+  }
+
+    .container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      width: 90%;
+      max-width: 1000px;
+      margin: 40px auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    #background-vidéo{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+    .form-group {
+      position: relative;
+      margin-top: 40px;
+    }
+
+    .form-group svg {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      color: #aaa;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 12px 12px 40px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #25D366;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: #25D366;
+      margin-top: 25px;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1ebe57;
+      transform: scale(1.02);
+    }
+
+     .contact-info {
+    margin-top: 40px;
+    }
+
+  .contact-info p {
+    margin: 5px 0;
+    }
+
+  .map {
+    margin-top: 30px;
+    height: 500px;
+    border: none;
+    width: 100%;
+    border-radius: 6px;
+    }
+    footer {
+        background-color: #2c3e50;
+        text-align: center;
+        padding: 20px;
+        color: white;
+        font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+    nav {
+      flex-direction: column;
+    }
+  }
+  </style>
+<!--Fin des r7gles CSS-->
+
+
+
+
+
+
+
+
+
+
+    <!--le code JavaScript pour envoyer le formulaire via whatsapp-->
+  <script>
+    lucide.createIcons();
+
+    document.getElementById('contactform').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nom = document.getElementById('nom').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const sujet = document.getElementById('sujet').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const numerowhatsapp = '237675262706';
+      //ici, il a fallu remplir le Numéro WhatSApp sans mettre le "+" ni espace.
+
+      const texte = `Bonjour, je suis ${nom} \n\nMon email: (${email}).\n\nSujet : ${sujet}\n\nMessage : ${message}`;
+      const url = `https://wa.me/${numerowhatsapp}?text=${encodeURIComponent(texte)}`;
+      window.open(url, '_blank');
+    });
+  </script>
+
+</body>
+</html>

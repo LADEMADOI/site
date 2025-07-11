@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>A propos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- Menu de navigation -->
+  <nav>
+    <a href="Accueil.html">Accueil</a>
+    <a href="A propos.html">A propos</a>
+    <a href="Nos services.html">Nos services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Header avec image de fond -->
+    <header>
+        <h1>A propos de LADEMADOI</h1>
+    </header>
+
+    <video autoplay muted loop id="background-vidéo">
+      <source src="vidéo3.mp4" type="video/mp4">
+    </video>
+
+    <main>
+        <div class="container">
+            <section class="director-section">
+                <table>
+                    <tr>
+                        <td>
+                            <img src="profil.png" class="photo-cadre">
+                        </td>
+                        <td>
+                            <div class="bio">
+                                <button class="cta-button"><center>Informations sur le directeur</center></button>
+                                <p>Technicien informaticien d'origine camerounaise, Monsieur TSAFACK TSADJIA Kevin Antoine de son nom complet,
+                                nait le 20 avril 1984 au village <u>Fongo-Ndeng</u> et y grandit avant de s'installer à Douala, où il commence à s'en donner 
+                                pleinement aux techniques de réparation d'outils informatiques. Soutenu par ses parents 
+                                , il obtient son attestion au centre de formation professionnel de douala <u>(CFP-Douala)</u> en tant 
+                                que maintenancier-informaticien en 2010.</p>
+
+                                <p>De l'été 2008 jusqu'à nos jours, Monsieur TSAFACK Kevin est marié légalement à deux (02) magnifiques femmes. 
+                                Actuellement dans son harem, ce dernier a 07 enfants qui sont scolarisés 
+                                et bien vaillants.</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section class="Company-history">
+                <button class="cta-button"><center>A propos de l'entreprise </center></button>
+                <p>Monsieur TSAFACK Kevin inaugure officiellement son entreprise le Jeudi 10 octobre 2013 en présence de ses deux (02) épouses</em>
+                et sa première fille. La spécialité d'origine de cette dernière étant la maintenance des systèmes et réseaux informatiques (le MSRI), celle-ci va très vite s'élargir avec 
+                plusieurs autres spécialités qui entrent dans le domaine de l'informatique. Aujourd'hui, LADEMADOI est une petite et moyenne entreprise qui est autonome et qui prone la satisfaction 
+                de tout client.</p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p><pre>&copy; 2025 - LADEMADOI     |   Tous droits réservés.</pre></p>
+    </footer>
+</body>
+ <!--Fin du codage en HTML -->
+
+
+<!--Debut des r7gles CSS-->
+<style>
+    body{
+        font-family: Arial,  sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f9f9f9;
+        color: #222;
+    }
+    nav {
+      background: #005c99;
+      padding: 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      display: flex;
+      justify-content: space-around;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px;
+    }
+
+    nav a:hover {
+      color: #00aced;
+    }
+    h1{
+        background: #004080;
+        color: white;
+        padding: 2px;
+        text-align: center;
+    }
+
+    #background-vidéo{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+    main{
+        padding: 30px;
+    }
+    .director-section{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: flex-start;
+        margin-bottom: 40px;
+    }
+    .photo-cadre{
+        max-width: 300%;
+        height: auto;
+        width: 100%;
+        min-width: 200px;
+        border: 0.5px dashed #aaa;
+        border-radius: 200px;
+    }
+    .bio{
+        flex: 1;
+        padding: 10px;
+    }
+
+    .container {
+    max-width: 15000px;
+    min-width: 1000px;
+    margin: 100px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .company-history{
+        background: #f1f1f1;
+        padding: 20px;
+        border-left: 4px solid #005c99;
+    }
+    footer{
+        background: #005c99;
+        color: white;
+        text-align: center;
+        padding: 15px;
+    }
+    td{
+    padding: 40px;
+    margin: 4000px;
+    }
+
+
+    h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #005c99;
+    color: white;
+    }
+    .cta-button {
+    padding: 15px 30px;
+    color: white;
+    font-size: 1.2em;
+    background-color: #005c99;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    left: 35%;
+  }
+
+  .cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  }
+
+    img{
+    max-width: 100%;
+    height: auto;
+    }
+</style>
+<!--Fin des r7gles CSS-->
+</html>
